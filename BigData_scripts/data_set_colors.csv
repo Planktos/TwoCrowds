@@ -1,0 +1,19 @@
+project,label,color
+Challenger,Challenger,black
+CPR,Continuous Plankton Recorder,firebrick
+Globec_GB,GLOBEC - Georges Bank,darkblue
+Globec_NP,GLOBEC - North Pacific,skyblue2
+Globec_SO,GLOBEC - Southern Ocean,dodgerblue3
+ISIIS-SoFL,ISIIS - Straits of Florida,#006400
+ISIIS-SCB-jellyfish,ISIIS - S. California Bight (jellyfish),#247A24
+ISIIS-nGOM,ISIIS - N. Gulf of Mexico,#489048
+ISIIS-SCB,ISIIS - S. California Bight,#6DA66D
+ISIIS-MontereyBay,ISIIS - Monterey Bay,#91BC91
+ISIIS-Stellwagen,ISIIS - Stellwagen Bank,#B6D2B6
+CoML,Census of Marine Life,darkgoldenrod1
+SeaLB,SeaLife Base,slategrey
+JEDI,Jellyfish Database Initiative,lightseagreen
+Coral_Watch,Coral Watch,darkorange2
+BATS,Bermuda Atlantic Time-Series,deeppink4
+HOTS,Hawaii Ocean Time Series,deeppink
+Pufferfish genome,Pufferfish Genome,yellow1
