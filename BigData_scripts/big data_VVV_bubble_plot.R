@@ -3,7 +3,7 @@
 
 #AUTHOR: Kelly Robinson
 #CREATED: 2 February 2016
-#LAST MODIFIED: 26 July 2016
+#LAST MODIFIED: 11 Feb 2017
 
 #------------------------
 
@@ -97,11 +97,12 @@ v.legend <- g_legend(vd)
 
 vv <- ggplot(data = vol.var, aes(x=max.vv, y=max.volume)) + geom_point(show.legend = T, aes(size = log10BD, color = as.factor(project))) +
       scale_colour_manual(values = vol.var$color, guide = F) +
-      scale_size(range = c(1,40), breaks = seq(1,40,1)) +
-      scale_x_continuous(name = "Maximum variety x veracity", expand=c(0.1,0.1), trans = "log10", breaks = c(1,10,100,1000,10000,100000), labels = trans_format('log10', math_format(10^.x))) +
-      scale_y_continuous(name = "Maximum annual volume", expand=c(0.1,0.1), trans = "log10", limits = c(1e3,1e7), breaks = c(1,10,1e2,1e3,1e4,1e5,1e6,1e7,1e8), labels = trans_format('log10', math_format(10^.x))) +
-      theme_bw(base_size = 30) + theme(legend.box = "vertical", legend.key = element_blank(), axis.title = element_text(face = "bold", size = 30), legend.title = element_blank(), legend.key.size = unit(2.25, "lines")) +
-      theme(axis.line.y = element_line(colour = "black", size = 1), axis.line.x = element_line(colour = "black", size = 1), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.border = element_blank(), axis.ticks = element_line(size = 1)) +
+      scale_size(range = c(0,40), breaks = seq(0,40,1)) +
+      scale_x_continuous(name = "Maximum variety x veracity", expand=c(0.1,0.1), trans = "log10", breaks = c(0.1,1,10,100,1000,10000,100000), labels = trans_format('log10', math_format(10^.x))) +
+      scale_y_continuous(name = "Maximum annual volume", expand=c(0.1,0.1), trans = "log10", limits = c(1e2,1e9), breaks = c(1e2,1e3,1e4,1e5,1e6,1e7,1e8,1e9), labels = trans_format('log10', math_format(10^.x))) +
+      theme(axis.text.x = element_text(size = 30), axis.text.y = element_text(size = 30), axis.line.y = element_line(colour = "black", size = 1), axis.line.x = element_line(colour = "black", size = 1)) +
+      theme(panel.grid.major = element_blank(), panel.background = element_blank(), panel.grid.minor = element_blank(), panel.border = element_blank(), axis.ticks = element_line(size = 1), axis.ticks.length = unit(2,"mm")) +
+      theme(legend.box = "vertical", legend.key = element_blank(), axis.title = element_text(face = "bold", size = 30), legend.title = element_blank(), legend.text = element_text(size = 30), legend.key.size = unit(2.25, "lines")) +   
       guides(colour = F) + theme(legend.position = "right")
             
 plot(vv)
@@ -112,7 +113,7 @@ g <- grid.arrange(vv, v.legend, ncol = 1)
 plot(g)
             
 #print image file to a directory
-png(file = "big_data_201608_noguide.png", width = 16, height = 10, units = "in", res = 300)
+png(file = "big_data_20170211_noguide.png", width = 16, height = 10, units = "in", res = 300)
 plot(vv)
 dev.off()                                  
 
